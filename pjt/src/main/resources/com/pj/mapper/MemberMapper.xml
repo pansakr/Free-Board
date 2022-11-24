@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pj.mapper.MemberMapper">
+
+  <insert id="join">
+    insert into member3(id, password, email, phone, age, gender)
+    values(#{id}, #{password}, #{email}, #{phone}, #{age}, #{gender})
+  </insert>
+
+  <select id="login" resultType="int">
+    select count(*) from member3
+    where id = #{id} and password = #{password}
+  </select>
+  
+  <select id="getMember" resultType="com.pj.domain.MemberVO">
+    select * from member3 where id = #{id}
+  </select>
+  
+  <update id="modify">
+    update member3 set 
+    password = #{password},
+    email = #{email},
+    phone = #{phone},
+    age = #{age},
+    gender = #{gender}
+    where id = #{id}
+     
+  </update>
+  
+  <delete id="remove">
+    delete from member3 where id = #{id}
+  </delete>
+</mapper>
