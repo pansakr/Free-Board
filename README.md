@@ -29,7 +29,6 @@
 
 ● 가입 완료시 로그인 페이지로의 이동 여부를 물어봅니다
 
-<img width="50%" src=""/>
 <img width="100%" src="https://user-images.githubusercontent.com/118809108/203780224-c051d4d3-6d04-485e-be02-9271e835917f.jpg"/>
 <img width="80%" src="https://user-images.githubusercontent.com/118809108/203780225-fea36806-531a-4dc3-8551-47a1651fcb8f.jpg"/>
 
