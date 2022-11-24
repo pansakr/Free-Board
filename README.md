@@ -58,5 +58,11 @@
 
 ● 검색 후 게시글 조회 페이지에서 목록으로 돌아올 경우 검색옵션, 키워드와 함께 페이지 번호를 기억합니다
 
-
 <img width="100%" src="https://user-images.githubusercontent.com/118809108/203780221-8541c990-2732-4c8e-8182-768cd163ff66.jpg"/>
+
+### URL
+
+● 로그인 하지 않은 사용자가 URL을 통해 권한이 필요한 페이지에 강제로 접근시 목록 페이지로 이동합니다
+
+<img width="60%" src="https://user-images.githubusercontent.com/118809108/203772396-7360e3aa-ddb5-44f6-a939-f0e14bbf408a.JPG"/>
+<img width="60%" src="https://user-images.githubusercontent.com/118809108/203772397-ffec83ad-ae6a-4a48-b877-9e39926e3abb.JPG"/>
