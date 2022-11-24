@@ -65,3 +65,7 @@
 
 <img width="60%" src="https://user-images.githubusercontent.com/118809108/203772396-7360e3aa-ddb5-44f6-a939-f0e14bbf408a.JPG"/>
 <img width="60%" src="https://user-images.githubusercontent.com/118809108/203772397-ffec83ad-ae6a-4a48-b877-9e39926e3abb.JPG"/>
+
+## ERD
+
+<img width="100%" src="https://user-images.githubusercontent.com/118809108/203772371-c5fef000-c518-402d-86b8-a9a51c0ae6af.JPG"/>
