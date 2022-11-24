@@ -12,13 +12,51 @@
 ● ORACLE
 ## 📄주요 기능
 1. 검색, 글작성, 로그인, 회원정보 수정,삭제
+
 2. 비로그인 유저는 글작성, 수정 제한
+
 3. 가입시 공백, 글자수 체크
+
 4. 비로그인 유저가 권한이 필요한 페이지에 URL로 접근시 메인으로 이동
 ---
-###리스트 페이지와
+### 리스트 ,회원가입
+
+● 프로그램을 실행하면 리스트 화면이 나타납니다
+
+● 로그인을 하지 않은 사용하는 로그인,회원가입 버튼이 보이고 글쓰기 버튼이 보이지 않습니다
+
+● 회원가입시 영문체크, 공백여부, 글자수, 비밀번호 일치 여부를 확인합니다
+
+● 가입 완료시 로그인 페이지로의 이동 여부를 물어봅니다
 
 <img width="50%" src=""/>
-  <img width="70%" src="https://user-images.githubusercontent.com/118809108/203772401-971f239a-a2ba-46d7-8fba-085df2441eed.JPG"/>
-  
+<img width="100%" src="https://user-images.githubusercontent.com/118809108/203780224-c051d4d3-6d04-485e-be02-9271e835917f.jpg"/>
+<img width="80%" src="https://user-images.githubusercontent.com/118809108/203780225-fea36806-531a-4dc3-8551-47a1651fcb8f.jpg"/>
 
+### 로그인 후의 리스트, 내정보
+
+● 로그인 유저는 로그인,가입 버튼이 로그아웃, 계정 버튼으로 바뀌고 글쓰기 버튼이 생깁니다
+
+● 개인정보 수정을 할 수 있고, 탈퇴 시 확인을 합니다
+
+<img width="100%" src="https://user-images.githubusercontent.com/118809108/203780226-f8e5794a-e686-43f7-900b-bf9fb3919aa0.jpg"/>
+<img width="60%" src="https://user-images.githubusercontent.com/118809108/203772384-5088899b-adb2-423c-a32d-1000eea1ea95.JPG"/>
+
+### 글쓰기, 게시글 조회
+
+● 로그인한 사용자는 글 작성을 할 수 있습니다
+
+● 작성 완료시 게시글 조회 페이지로 이동합니다 
+
+● 조회수는 작성,수정시 올라가지 않고 게시글 조회 할때만 올라갑니다
+
+<img width="100%" src="https://user-images.githubusercontent.com/118809108/203780227-94393c34-3e78-46a0-82b4-c769bfdde2a3.jpg"/>
+
+### 검색
+
+● 검색 시 여러 옵션을 고를 수 있고, 페이지 이동시 옵션과 키워드가 유지됩니다
+
+● 검색 후 게시글 조회 페이지에서 목록으로 돌아올 경우 검색옵션, 키워드와 함께 페이지 번호를 기억합니다
+
+
+<img width="100%" src="https://user-images.githubusercontent.com/118809108/203780221-8541c990-2732-4c8e-8182-768cd163ff66.jpg"/>
