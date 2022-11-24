@@ -17,7 +17,8 @@
 4. 비로그인 유저가 권한이 필요한 페이지에 URL로 접근시 메인으로 이동
 ---
 ###리스트 페이지와
-<div>
-<img width="50%" src=""/>
 
-</div>
+<img width="50%" src=""/>
+  <img width="70%" src="https://user-images.githubusercontent.com/118809108/203772401-971f239a-a2ba-46d7-8fba-085df2441eed.JPG"/>
+  
+
