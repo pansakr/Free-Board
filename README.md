@@ -32,6 +32,8 @@
 <img width="100%" src="https://user-images.githubusercontent.com/118809108/203780224-c051d4d3-6d04-485e-be02-9271e835917f.jpg"/>
 <img width="80%" src="https://user-images.githubusercontent.com/118809108/203780225-fea36806-531a-4dc3-8551-47a1651fcb8f.jpg"/>
 
+---
+
 ### 로그인 후의 리스트, 내정보
 
 ● 로그인 유저는 로그인,가입 버튼이 로그아웃, 계정 버튼으로 바뀌고 글쓰기 버튼이 생깁니다
@@ -40,6 +42,14 @@
 
 <img width="100%" src="https://user-images.githubusercontent.com/118809108/203780226-f8e5794a-e686-43f7-900b-bf9fb3919aa0.jpg"/>
 <img width="60%" src="https://user-images.githubusercontent.com/118809108/203772384-5088899b-adb2-423c-a32d-1000eea1ea95.JPG"/>
+
+◈ 처음에는 로그인 유지 방식을 로그인 성공시 쿠키 생성후 값에 DB에서 가져온 아이디를 담아 보내주고 재요청시 서버에 저장된 세션값과 
+
+일치 여부를 확인했으나, 유저의 개인정보를 쿠키에 담는다는 보안상의 문제도 있고, 크롬 개발자도구에 쿠키를 생성하지 않아도 
+
+jsessionId 라는 이름으로 요청이 오고, 그 값으로 자동생성된 세션의 값이 담긴다는것을 알게 된 후 세션 유지방식으로 바꾸었습니다.
+
+---
 
 ### 글쓰기, 게시글 조회
 
@@ -51,6 +61,8 @@
 
 <img width="100%" src="https://user-images.githubusercontent.com/118809108/203780227-94393c34-3e78-46a0-82b4-c769bfdde2a3.jpg"/>
 
+---
+
 ### 검색
 
 ● 검색 시 여러 옵션을 고를 수 있고, 페이지 이동시 옵션과 키워드가 유지됩니다
@@ -59,12 +71,16 @@
 
 <img width="100%" src="https://user-images.githubusercontent.com/118809108/203780221-8541c990-2732-4c8e-8182-768cd163ff66.jpg"/>
 
+---
+
 ### URL
 
 ● 로그인 하지 않은 사용자가 URL을 통해 권한이 필요한 페이지에 강제로 접근시 목록 페이지로 이동합니다
 
 <img width="60%" src="https://user-images.githubusercontent.com/118809108/203772396-7360e3aa-ddb5-44f6-a939-f0e14bbf408a.JPG"/>
 <img width="60%" src="https://user-images.githubusercontent.com/118809108/203772397-ffec83ad-ae6a-4a48-b877-9e39926e3abb.JPG"/>
+
+---
 
 ### ERD
 
