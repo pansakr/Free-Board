@@ -15,71 +15,71 @@ import com.pj.service.MemberService;
 import lombok.RequiredArgsConstructor;
 
 @Controller
-@RequestMapping("/member/*")
 @RequiredArgsConstructor
 public class MemberController {
 
-	private final MemberService service;
-	
-	@GetMapping("/join")
-	public void join() {}
-	
-	@PostMapping("/join")
-	public String join(MemberVO member, RedirectAttributes rttr) {
-		
-		service.join(member);
-		rttr.addFlashAttribute("msg", "join");
-		
-		return "redirect:/board/list";
-	}
-	
-	@GetMapping("/login")
-	public void login() {}
-	
-	@PostMapping("/login")
-	public String login(MemberVO member, RedirectAttributes rttr, HttpSession session) {
-		
-		boolean result = service.login(member);
+    private final MemberService memberService;
 
-		if(result == true) {		
-			session.setAttribute("member", service.getMember(member));
-			session.setMaxInactiveInterval(60*20);
-		}else {
-			rttr.addFlashAttribute("msg", "fail");
-			return "redirect:/member/login";
-		}
-			
-		return "redirect:/board/list";
-	}
-	
-	@GetMapping("/logout")
-	public String logout(HttpSession session) {
+    @GetMapping("/member/join")
+    public void join() {
+        // TODO: 회원가입 페이지 뷰 이름을 반환해야 할 것 같아요.
+        
+    }
 
-			session.invalidate();
-				
-		return "redirect:/board/list";
-	}
-	
-	@GetMapping({"/info","/modify"})
-	public void info(HttpSession session, MemberVO member) {
-		
-	    session.setAttribute("member", service.getMember(member));	
-	}
+    @PostMapping("/member/join")
+    public String join(MemberVO member, RedirectAttributes rttr) {
+        memberService.join(member);
+        rttr.addFlashAttribute("msg", "join");
 
-	@PostMapping("/modify")
-	public String modify(MemberVO member, RedirectAttributes rttr) {
-		
-		service.modify(member);
-		rttr.addAttribute("id", member.getId());
-		return "redirect:/member/info";
-	}
-	
-	@GetMapping("/remove")
-	public String remove(HttpSession session, @RequestParam("id") String id) {
-				
-		service.remove(id);
-		session.invalidate();		
-		
-		return "redirect:/board/list";
-	}
+        return "redirect:/board/list";
+    }
+
+    @GetMapping("/login")
+    public void login() {
+        // TODO: 로그인 페이지 뷰 이름을 반환해야 할 것 같아요.
+
+    }
+
+    @PostMapping("/login")
+    public String login(MemberVO member, RedirectAttributes rttr, HttpSession session) {
+        boolean isLogin = memberService.login(member);
+
+        if (!isLogin) {
+            rttr.addFlashAttribute("msg", "fail");
+            return "redirect:/member/login";
+        }
+
+        session.setAttribute("member", memberService.getMember(member));
+        session.setMaxInactiveInterval(60 * 20);
+
+        return "redirect:/board/list";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/board/list";
+    }
+
+    @GetMapping({"/info", "/modify"})
+    public void info(HttpSession session, MemberVO member) {
+        session.setAttribute("member", memberService.getMember(member));
+    }
+
+    @PostMapping("/modify")
+    public String modify(MemberVO member, RedirectAttributes rttr) {
+        memberService.modify(member);
+        rttr.addAttribute("id", member.getId());
+
+        return "redirect:/member/info";
+    }
+
+    @GetMapping("/remove")
+    public String remove(HttpSession session, @RequestParam("id") String id) {
+        memberService.remove(id);
+        session.invalidate();
+
+        return "redirect:/board/list";
+    }
+
 }
